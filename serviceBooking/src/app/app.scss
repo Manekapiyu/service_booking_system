@@ -1,0 +1,225 @@
+/* --------------------------
+   Color Palette
+-------------------------- */
+$primary-color: #7cb037;   // deep green for active / highlights
+$secondary-color: #70c24a; // bright green for hover / active states
+$accent-color: #ffd460;    // warm yellow for buttons / highlights
+$text-color: #1f8639;      // main text color
+$white: #ffffff;            
+$gray-light: #f2f2f2;      // subtle gray for borders / backgrounds
+$dark-blue: #0b3d91;       // darker blue for headings / contrast
+$orange: #ff8c42;          // minor accents
+
+/* --------------------------
+   Global Styles
+-------------------------- */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $gray-light;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+ .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      width: 50px;   // adjust size
+      height: 50px;  // maintain aspect ratio
+      object-fit: contain;
+    }
+}
+/* --------------------------
+   Header / Navbar
+-------------------------- */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: $primary-color; 
+  height: 70px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+
+  img.logo {
+    width: 130px;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: $white;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 6px;
+      padding: 8px 15px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: $secondary-color;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $accent-color;
+        color: $dark-blue;
+      }
+
+      &.ant-btn:hover {
+        background-color: $secondary-color;
+        color: $white;
+      }
+    }
+  }
+
+  .active-button {
+    border-radius: 6px;
+    padding: 5px 12px;
+    background-color: $secondary-color;
+    color: $white;
+    font-weight: 600;
+  }
+}
+
+/* --------------------------
+   Sidebar
+-------------------------- */
+.sidebar-component {
+  padding: 0 30px;
+  background-color: $secondary-color; 
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+
+  .sidebar-logo-mobile {
+    min-height: 64px;
+    margin-bottom: 20px;
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .profile-avatar {
+    text-align: center;
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 30px;
+
+    .user-profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 16px;
+      color: $dark-blue;
+      margin: 20px 0 30px;
+    }
+  }
+}
+
+/* --------------------------
+   Ant Design Menu
+-------------------------- */
+.ant-menu {
+  background-color: transparent;
+
+  .ant-menu-item {
+    font-weight: 500;
+    font-size: 14px;
+    color: $white;
+    margin-bottom: 12px;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $dark-blue;
+      background-color: $accent-color;
+    }
+  }
+
+  .anticon {
+    background-color: $orange;
+    border-radius: 4px;
+  }
+
+  &-inline,
+  &-vertical,
+  &-vertical-left {
+    border-right: 0;
+  }
+}
+
+/* --------------------------
+   Mobile Responsive
+-------------------------- */
+@media only screen and (max-width: 991px) {
+  .main-header {
+    padding: 0 20px;
+
+    .nav-links {
+      display: none;
+    }
+  }
+
+  .mobile-sidenav {
+    display: block;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: $primary-color;
+    z-index: 999;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .ant-layout-sider-zero-width-trigger {
+    background-color: $secondary-color !important;
+    top: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-sidenav {
+    display: none;
+  }
+}
+
+/* --------------------------
+   Utilities
+-------------------------- */
+.trigger {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+
+  &:after {
+    display: none;
+  }
+}
