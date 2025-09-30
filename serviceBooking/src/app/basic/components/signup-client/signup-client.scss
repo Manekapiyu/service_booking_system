@@ -1,0 +1,53 @@
+.bg {
+  width: 100%;
+  min-height: 100vh;
+  background: #f0f2f5; /* light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.parent {
+  background: #fff; /* white card */
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.child {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.child h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111111; 
+  margin: 0;
+    margin-right: 40px;
+}
+
+nz-form-item {
+  margin-bottom: 15px;
+}
+
+input[nz-input] {
+  height: 40px;
+  border-radius: 6px;
+}
+
+button[nz-button] {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+  border: none;
+  padding-bottom: 2rem;
+
+}
+

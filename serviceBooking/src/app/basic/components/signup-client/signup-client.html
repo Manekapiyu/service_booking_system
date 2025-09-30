@@ -1,0 +1,47 @@
+<div class="bg">
+  <div class="parent">
+    <div class="child">
+      <h1 style="margin-left: 55px">Client Signup</h1>
+    </div>
+
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Please input valid E-mail">
+          <input nz-input placeholder="E-mail" formControlName="email" id="email"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Please input valid password">
+          <input nz-input placeholder="Password" formControlName="password" type="password" id="password"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Please input valid password">
+          <input nz-input placeholder="Confirm Password" formControlName="checkPassword" type="password" id="checkPassword"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Please input valid Name">
+          <input nz-input placeholder="Name" formControlName="name" id="name"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Please input valid LastName">
+          <input nz-input placeholder="LastName" formControlName="lastName" id="lastName"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Please input valid Phone">
+          <input nz-input placeholder="Phone" formControlName="phone" id="phone"/>
+        </nz-form-control>
+      </nz-form-item>
+
+      <button nz-button nzType="primary" type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
