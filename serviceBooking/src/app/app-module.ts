@@ -20,7 +20,8 @@ import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 
 //  Centralized Ng Zorro imports (you should create this file)
-import {DemoNgZorroAntdModule} from './DemoNgZorroAntdModule'
+import {DemoNgZorroAntdModule} from './DemoNgZorroAntdModule';
+import { SignupClient } from './basic/components/signup-client/signup-client';
 
 registerLocaleData(en);
 
